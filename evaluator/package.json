@@ -4,7 +4,8 @@
   "description": "Simple node server that exposes a endpoint for evaluating arithmetic expressions",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --timeout 5000 --recursive --reporter=nyan",
+    "start": "node index.js"
   },
   "author": "Tolga Ekmen <tolga.ekmen@gmail.com> (https://github.com/tolgaek)",
   "license": "MIT",
