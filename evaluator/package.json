@@ -1,0 +1,14 @@
+{
+  "name": "evaluator",
+  "version": "1.0.0",
+  "description": "Simple node server that exposes a endpoint for evaluating arithmetic expressions",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Tolga Ekmen <tolga.ekmen@gmail.com> (https://github.com/tolgaek)",
+  "license": "MIT",
+  "dependencies": {
+    "connect": "^3.4.0"
+  }
+}
