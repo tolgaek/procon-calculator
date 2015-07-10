@@ -1,0 +1,18 @@
+{
+  "name": "producer",
+  "version": "1.0.0",
+  "description": "Produces random arithmetic expressions and makes request to get them evaluated",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Tolga Ekmen <tolga.ekmen@gmail.com> (https://github.com/tolgaek)",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.58.0"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "mocha": "^2.2.5"
+  }
+}
