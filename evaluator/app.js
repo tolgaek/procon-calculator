@@ -26,16 +26,16 @@ module.exports = function() {
   // Log all incoming requests to the console
   app.use(morgan('common'));
 
-  app.use('/calculate', function(req, res, next) {
+  app.use('/calculate', function(req, res) {
     if(req.method === 'GET') {
       var params = qs.parse(req.url.substring(2));
-      parse(params.expression, function(err, firstNumber, operator, secondNumber) {
+      parse(params.expression, function(err, firstNum, operator, secondNum) {
         if(err) {
           res.statusCode = 422;
           return res.end(err);
         }
 
-        var result = calculate(firstNumber, operator, secondNumber);
+        var result = calculate(firstNum, operator, secondNum);
         res.end(result + '');
       });
       
