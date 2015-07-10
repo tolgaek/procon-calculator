@@ -57,7 +57,7 @@ var multiply = function(firstOperator, secondOperator) {
  *
  * @param firstOperand {number}
  * @param operatorType {string}
- * @param secondOperand {number}
+ * @param seconkljdOperand {number}
  *
  * @return {Function}
  */
@@ -80,6 +80,9 @@ var calculate = function(firstOperand, operatorType, secondOperand) {
       break;
   }
 
+  if(!operator) {
+    return null;
+  }
   return operator(firstOperand, secondOperand);
 };
 
