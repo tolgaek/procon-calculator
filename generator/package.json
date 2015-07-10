@@ -1,5 +1,5 @@
 {
-  "name": "producer",
+  "name": "generator",
   "version": "1.0.0",
   "description": "Produces random arithmetic expressions and makes request to get them evaluated",
   "main": "index.js",
