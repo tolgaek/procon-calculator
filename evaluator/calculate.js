@@ -6,24 +6,26 @@
 /**
  * Given two integers, it returns their sum
  *
+ * @private
  * @param firstOperand {number}
  * @param secondOperand {number}
  *
  * @return {number} the total of the first and secondOperand
  */
-var add = function(firstOperator, secondOperator) {
+var _add = function(firstOperator, secondOperator) {
   return firstOperator + secondOperator;
 };
 
 /**
  * Given two integers, it returns their difference
  *
+ * @private
  * @param firstOperand {number}
  * @param secondOperand {number}
  *
  * @return {number} the difference between the first and secondOperand
  */
-var subtract = function(firstOperator, secondOperator) {
+var _subtract = function(firstOperator, secondOperator) {
   return firstOperator - secondOperator;
 };
 
@@ -33,21 +35,23 @@ var subtract = function(firstOperator, secondOperator) {
  * @param firstOperand {number}
  * @param secondOperand {number}
  *
+ * @private
  * @return {float}
  */
-var divide = function(firstOperator, secondOperator) {
+var _divide = function(firstOperator, secondOperator) {
   return firstOperator / secondOperator;
 };
 
 /**
  * Given two integers, it returns their multiplication
  *
+ * @private
  * @param firstOperand {number}
  * @param secondOperand {number}
  *
  * @return {number}
  */
-var multiply = function(firstOperator, secondOperator) {
+var _multiply = function(firstOperator, secondOperator) {
   return firstOperator * secondOperator;
 };
 
@@ -66,17 +70,17 @@ var calculate = function(firstOperand, operatorType, secondOperand) {
 
   switch(operatorType) {
     case '+':
-      operator = add;
+      operator = _add;
       break;
     case '-':
-      operator = subtract;
+      operator = _subtract;
       break;
     case '*':
     case 'x':
-      operator = multiply;
+      operator = _multiply;
       break;
     case '/':
-      operator = divide;
+      operator = _divide;
       break;
   }
 
