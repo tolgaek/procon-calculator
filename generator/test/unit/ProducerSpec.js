@@ -4,6 +4,7 @@ var sinon = require('sinon');
 var request = require('request');
 var expect = chai.expect;
 var Producer = require('../../Producer');
+chai.should();
 
 describe('Producer', function() {
   var evaluatorUrl = 'localhost:3000';

@@ -31,8 +31,8 @@ var Producer = module.exports = function Producer(evaluatorUrl, options) {
 
   this.options = {
     evaluatorUrl: evaluatorUrl,
-    minValue: options.minValue || options.minValue === 0 ? 0 : -1000,
-    maxValue: options.maxValue || options.maxValue === 0 ? 0 : 1000,
+    minValue: options.minValue || (options.minValue === 0 ? 0 : -1000),
+    maxValue: options.maxValue || (options.maxValue === 0 ? 0 : 1000),
     supportedOperators: options.supportedOperators || ['+', '-', '*', '/']
   };
 };
@@ -91,7 +91,7 @@ Producer.prototype._generateExpression = function _generateExpression() {
  * @param callback {Function}
  */
 Producer.prototype._send = function send(callback) {
-  request.get(this.options.evaluatorUrl, {
+  request.get(this.options.evaluatorUrl + '/calculate', {
     qs: {
       expression: this.expression
     }
