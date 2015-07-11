@@ -1,14 +1,24 @@
 # PROCON Calculator
 
-Simple implementation of Producer Consumer model using HTTP to communicate between the producer and consumer
+Simple implementation of Producer Consumer model using HTTP to communicate between the producer and consumer in Node.js
 
-The messages sent use generated simple aritmethic expressions in the form of `{{Number}}{{Operator}}{{Number}}=` - Example expression `12+3=`
+
+## Messages
+Messages are randomly generated to follow a simple aritmethic expressions in the form of `{{Number}}{{Operator}}{{Number}}=`
+Supported Operators are `*`, `+`, `-`, `/`
+
+Example `12+3=`
 
 
 This repo is broken down into two sections:
 
 - **generator**: Acts as the **Producer** generating arithmetic operations and sending them over HTTP to the Consumer to get them evaluated. It's capable of creating multiple producers.
 - **evaluator**: Acts as the **Consumer** listening for incoming messages over HTTP to evaluate and respond with
+
+## Requirements
+
+- node.js
+- npm
 
 ## Usage
 
@@ -18,7 +28,9 @@ First, **evaluator** has to be started for it to listen incoming messages. Then 
 
 ## Evaluator
 
-While in the `/evaluator` folder, run `$ npm start` to start the server.
+While in the `/evaluator` folder, run 
+`$ npm install` to install the dependencies
+`$ npm start` to start the server.
 
 ### Environment Variables
 
@@ -28,7 +40,9 @@ While in the `/evaluator` folder, run `$ npm start` to start the server.
 
 ## Generator
 
-While in the `/generator` folder, run `$ npm start` to start the server.
+While in the `/generator` folder, run
+`$ npm install` to install the dependencies
+`$ npm start` to start the server.
 
 ### Environment Variables
 
@@ -40,4 +54,4 @@ While in the `/generator` folder, run `$ npm start` to start the server.
 
 ## Tests
 
-Tests for both projects can be run by using `$ npm test`
+Tests for both projects can be run by using `$ npm test` in their respective folders
