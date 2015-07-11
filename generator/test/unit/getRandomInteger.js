@@ -11,7 +11,7 @@ describe('getRandomInteger()', function() {
 
     var generatedInteger = getRandomInteger(minValue, maxValue);
     generatedInteger.should.be.a('number').and
-      .be.at.least(minValue).and.at.most(maxValue);
+      .be.at.least(minValue).and.below(maxValue);
   });
 
   describe('with invalid arguments', function() {

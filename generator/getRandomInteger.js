@@ -1,5 +1,6 @@
 /**
- * Generates a random integer within the range of max and min values
+ * Generates a random integer within the range of
+ * min (inclusive) and max (exclusive) values ([low, high))
  *
  * @param minValue {number}
  * @param maxValue {number}
