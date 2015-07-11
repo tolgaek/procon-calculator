@@ -42,7 +42,7 @@ module.exports = function() {
     }
   });
   // Create server and listen on port 3000
-  http.createServer(app).listen(3000);
+  http.createServer(app).listen(process.env.NODE_HTTP_PORT || 3000);
 
   return app;
 };
