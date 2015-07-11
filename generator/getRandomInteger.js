@@ -13,7 +13,7 @@ module.exports = function(minValue, maxValue) {
   if(isNaN(minValue) || isNaN(maxValue)) {
     throw new Error('getRandomInteger must be supplied with min/max values');
   }
-    
+
   var random = Math.random() * (maxValue - minValue) + minValue;
   return Math.floor(random);
 };
