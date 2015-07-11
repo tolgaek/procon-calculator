@@ -39,6 +39,10 @@ var _subtract = function(firstOperator, secondOperator) {
  * @return {float}
  */
 var _divide = function(firstOperator, secondOperator) {
+  // Avoid dividing by 0
+  if(secondOperator === 0) {
+    return 0;
+  }
   return firstOperator / secondOperator;
 };
 
