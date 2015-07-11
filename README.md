@@ -2,7 +2,7 @@
 
 Simple implementation of Producer Consumer model using HTTP to communicate between the producer and consumer
 
-The messages sent use generated simple aritmethic expressions in the form of `{{Number}}{{Operator}}{{Number}}=`
+The messages sent use generated simple aritmethic expressions in the form of `{{Number}}{{Operator}}{{Number}}=` - Example expression `12+3=`
 
 
 This repo is broken down into two sections:
