@@ -32,10 +32,15 @@ module.exports = function() {
       parse(params.expression, function(err, firstNum, operator, secondNum) {
         if(err) {
           res.statusCode = 422;
+          console.log('Received expression ' + params.expression +
+            ' was responded to with error message: ' + err);
           return res.end(err);
         }
 
         var result = calculate(firstNum, operator, secondNum);
+        console.log('Received expression ' + params.expression +
+          ' was evaluated to ' + result);
+        
         res.end(result + '');
       });
       
