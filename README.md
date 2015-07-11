@@ -52,6 +52,8 @@ While in the `/generator` folder, run
 - `MAX_VALUE`: `Default: 1000` - Maximum (exclusive) integer value when generating random arithmetic expressions
 - `MIN_VALUE`: `Default: -1000` - Minimum (inclusive) integer value when generating random arithmetic expressions
 
+##### Usage Examples
+To set custom min/max values, start server with: `$ MAX_VALUE=5 MIN_VALUE=1 npm start`
 ## Tests
 
 Tests for both projects can be run by using `$ npm test` in their respective folders
